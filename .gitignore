@@ -1,0 +1,4 @@
+.DS_Store
+/js/app.js
+/node_modules/
+/src/constants/Routes.js
