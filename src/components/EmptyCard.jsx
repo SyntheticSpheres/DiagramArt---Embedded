@@ -11,9 +11,9 @@ class EmptyCard extends React.Component {
 
     render() {
         return (
-            <li className="da-card">
+            <li className="da-card empty">
                 <div className="da-card-image">
-                    <img src="" />
+                    <div></div>
                 </div>
                 <div className="da-card-title">
                     <h3>Empty card</h3>

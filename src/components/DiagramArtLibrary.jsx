@@ -13,7 +13,7 @@ class DiagramArtLibrary extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="da-library">
                 <Menu />
                 <DiagramList />
             </div>

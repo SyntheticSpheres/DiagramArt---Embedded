@@ -13,17 +13,17 @@ class Menu extends React.Component {
     }
 
     handleQueryChange(event) {
-        this.setState({username: event.target.value});
+        this.setState({query: event.target.value});
     }
 
     render() {
         return (
             <nav className="da-navbar">
                 <ul>
-                    <li><a href="#">DiagramArtLogo</a></li>
+                    <li><a href="https://diagramart.com" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0255/1589/t/7/assets/diagramart_logo_with_tm.png?14105803135550891160" alt="diagramart logo" height="50" /></a></li>
                 </ul>
-                <form>
-                    <input type="text" value={this.state.query} onChange={this.handleQueryChange.bind(this)} placeholder="search" />
+                <form className="da-nav-form da-nav-right">
+                    <input type="text" className="da-form-input" value={this.state.query} onChange={this.handleQueryChange.bind(this)} placeholder="search" />
                 </form>
             </nav>
         );

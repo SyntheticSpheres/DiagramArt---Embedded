@@ -1,4 +1,3 @@
 .DS_Store
-/js/app.js
+/js/diagramartlibrary.js
 /node_modules/
-/src/constants/Routes.js
