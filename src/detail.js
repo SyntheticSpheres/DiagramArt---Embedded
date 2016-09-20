@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import DiagramArtLibrary from './components/DiagramArtLibrary.jsx';
+import DiagramArtDetail from './components/DiagramArtDetail.jsx';
 import Settings from './constants/Settings.js';
 
 /*
@@ -13,11 +13,14 @@ import Settings from './constants/Settings.js';
  */
 
 (function(){
-    window.DiagramArtLibrary = function(params) {
+    window.DiagramArtDetail = function(params) {
         if( !params.selector ) {
             throw "Selector is missing!";
         }
+        if( !params.diagramId ) {
+            throw "Diagram ID is missing!";
+        }
         Settings.merge(params);
-        ReactDOM.render(<DiagramArtLibrary />, document.getElementById(params.selector));
+        ReactDOM.render(<DiagramArtDetail id={params.diagramId} />, document.getElementById(params.selector));
     }
 })();

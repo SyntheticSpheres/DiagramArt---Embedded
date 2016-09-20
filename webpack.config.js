@@ -3,8 +3,14 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
-  entry: './src/library.js',
-  output: { path: __dirname, filename: './js/diagramartlibrary.js' },
+  entry:  {
+      diagramartlibrary : "./src/library.js",
+      diagramartdetail : "./src/detail.js"
+  },
+  output: {
+      path: __dirname + "/js",
+      filename: "[name].js"
+  },
   module: {
     loaders: [
       {

@@ -49,7 +49,7 @@ class DiagramList extends React.Component {
                     </ul>
                 </div>
                 <div className="da-pagination">
-                    <Paginator page="1" total="5" />
+                    <Paginator page="3" total="5" />
                 </div>
             </div>
         );

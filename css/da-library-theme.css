@@ -4,7 +4,6 @@
 
 .da-navbar {
     height: 50px;
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -31,10 +30,6 @@
 .da-nav-form .da-form-input {
     padding: 6px 12px;
     outline: 0;
-}
-
-.da-container {
-    padding-top: 50px;
 }
 
 .da-list {
@@ -108,7 +103,7 @@
 }
 
 .da-pagination ul li {
-    float: left;
+    display: inline-block;
     margin-right: 5px;
 }
 
@@ -116,10 +111,15 @@
     display: block;
     background-color: rgb(70, 78, 84);
     color: white;
-    padding: 3px 10px;
+    padding: 6px 15px;
     cursor: pointer;
 }
 
 .da-pagination ul li a:hover {
     background-color: #b8cb3d;
+}
+
+.da-pagination ul li a.active {
+    background-color: #b8cb3d;
+    cursor: default;
 }
