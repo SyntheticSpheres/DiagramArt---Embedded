@@ -8,7 +8,9 @@ import DiagramUtils from '../utils/diagram';
  */
 const DiagramArtDetailActions = {
     /**
-     *
+     * Notices others that this diagram is going to be loaded and calls
+     * loading function.
+     * @param number diagramId
      */
     loadDiagram: function(diagramId) {
         console.log("DiagramArtDetailActions.loadDiagram(" + diagramId + ")");
@@ -18,7 +20,10 @@ const DiagramArtDetailActions = {
         });
         DiagramUtils.load(diagramId);
     },
-
+    /**
+     *
+     * @param object diagram
+     */
     diagramLoaded: function(diagram) {
         console.log("DiagramArtDetailActions.diagramLoaded(" + diagram + ")");
         AppDispatcher.handleAction({

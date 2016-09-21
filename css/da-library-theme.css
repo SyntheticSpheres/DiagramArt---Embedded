@@ -174,7 +174,11 @@
 }
 
 .da-shadow-box-content {
-    width: 90%;
+    width: 60%;
     margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    top: 10%;
+    position: relative;
     background-color: white;
 }

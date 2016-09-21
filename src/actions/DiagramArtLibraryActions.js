@@ -8,6 +8,7 @@ import Constants from '../constants/Constants.js';
 const DiagramArtLibraryActions = {
     /**
      *
+     * @param number diagramId
      */
     showDetail: function(diagramId) {
         console.log("DiagramArtLibraryActions.showDetail(" + diagramId + ")");

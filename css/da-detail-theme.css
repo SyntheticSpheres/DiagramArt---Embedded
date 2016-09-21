@@ -20,7 +20,7 @@
   font-style: normal;
   font-weight: 700;
   src: local('Lato Bold'), local('Lato-Bold'), url(http://fonts.gstatic.com/s/lato/v11/ObQr5XYcoH0WBoUxiaYK3_Y6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+2in-bootstrap-page00A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
@@ -53,15 +53,52 @@
     text-transform: uppercase;
 }
 
-.da-half-column {
-    width: 50%;
-    float: left;
+.da-flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 417px;
+}
+
+.da-detail.da-flipping {
+    width: 532px;
+}
+
+.da-detail.da-flipping:hover .da-flipper {
+    transform: rotateY(180deg);
+}
+
+.da-detail-part {
     padding: 10px;
 }
 
+.da-half-column {
+    width: 50%;
+    float: left;
+}
+
+.da-detail-card {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 532px;
+    height: 417px;
+}
+
+.da-detail-card:first-child {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.da-detail-card:last-child {
+    transform: rotateY(180deg);
+}
+
 .da-detail-image {
-    line-height: 100%;
+    height: 397px;
+    line-height: 391px;
     text-align: center;
+    border: 1px solid #c0c0c0;
 }
 
 .da-detail-image img {
@@ -69,6 +106,7 @@
     max-height: 100%;
     height: auto;
     width: auto;
+    vertical-align: middle;
 }
 
 .da-detail-info ul {

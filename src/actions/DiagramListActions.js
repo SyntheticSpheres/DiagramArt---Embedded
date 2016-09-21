@@ -3,12 +3,15 @@ import Constants from '../constants/Constants.js';
 import LibraryUtils from '../utils/library';
 
 /**
- *
+ * 
  * @author Matej 'juffalow' Jellus <juffalow@juffalow.com>
  */
 const DiagramListActions = {
     /**
      *
+     * @param string query
+     * @param number page
+     * @param number limit
      */
     loadLibrary: function(query, page, limit) {
         console.log("DiagramListActions.loadLibrary()");
@@ -23,6 +26,7 @@ const DiagramListActions = {
 
     /**
      *
+     * @param object library
      */
     libraryLoaded: function(library) {
         console.log("DiagramListActions.libraryLoaded(" + library + ")");
