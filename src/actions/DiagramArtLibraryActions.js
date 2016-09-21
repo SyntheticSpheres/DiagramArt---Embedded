@@ -15,7 +15,17 @@ const DiagramArtLibraryActions = {
             actionType: Constants.VIEW_DETAIL,
             diagramId: diagramId
         });
-    }
+    },
+
+    /**
+     *
+     */
+    hideDetail: function() {
+        console.log("DiagramArtLibraryActions.hideDetail()");
+        AppDispatcher.handleAction({
+            actionType: Constants.HIDE_DETAIL
+        });
+    },
 };
 
 export default DiagramArtLibraryActions;

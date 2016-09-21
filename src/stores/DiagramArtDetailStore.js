@@ -65,6 +65,8 @@ diagramArtDetailStore.dispatchToken = AppDispatcher.register(function(payload) {
         case Constants.DIAGRAM_LOAD_SUCCESSFUL:
             diagramArtDetailStore.setDiagram(action.diagram);
             console.log("diagram set");
+            console.log("dispatcher image src : " + action.diagram.image.src);
+            console.log(action.diagram);
             break;
     }
     diagramArtDetailStore.emitChange();

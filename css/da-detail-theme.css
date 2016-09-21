@@ -1,0 +1,111 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/UyBMtLsHKBKXelqf4x7VRQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://fonts.gstatic.com/s/lato/v11/ObQr5XYcoH0WBoUxiaYK3_Y6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://fonts.gstatic.com/s/lato/v11/H2DMvhDLycM56KNuAtbJYA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.da-detail {
+    color: #3d4c4f;
+    font-family: Lato;
+}
+
+.da-detail * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.da-detail:after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+.da-detail h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.da-half-column {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.da-detail-image {
+    line-height: 100%;
+    text-align: center;
+}
+
+.da-detail-image img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.da-detail-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.da-detail-info ul:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.da-detail-info ul li {
+    display: block;
+    float: left;
+    position: relative;
+    background-color: #f6f6f6;
+    border: 1px solid #c0c0c0;
+    margin-right: 3px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom: none;
+}
+
+.da-detail-info ul li a {
+    text-decoration: none;
+    padding: 7px 14px;
+    float: left;
+    color: #464e54;
+}
+
+.da-detail-tab-content {
+    border: 1px solid #c0c0c0;
+}
+
+.da-detail-tab-content > div {
+    padding: 10px;
+}

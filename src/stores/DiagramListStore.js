@@ -2,7 +2,7 @@ import EventEmitter from 'events';
 import Constants from '../constants/Constants.js';
 import AppDispatcher from '../dispatcher/AppDispatcher.js';
 
-var LIBRARY_CHANGE_EVENT = "change";
+var LIST_CHANGE_EVENT = "change";
 
 /**
  *
@@ -16,7 +16,7 @@ class DiagramListStore extends EventEmitter {
     }
 
     emitChange() {
-        this.emit(LIBRARY_CHANGE_EVENT);
+        this.emit(LIST_CHANGE_EVENT);
     }
 
     /**
@@ -24,7 +24,7 @@ class DiagramListStore extends EventEmitter {
      * @param function callback
      */
     addChangeListener(callback) {
-        this.on(LIBRARY_CHANGE_EVENT, callback);
+        this.on(LIST_CHANGE_EVENT, callback);
     }
 
     /**
@@ -32,7 +32,7 @@ class DiagramListStore extends EventEmitter {
      * @param function callback
      */
     removeChangeListener(callback) {
-        this.removeListener(LIBRARY_CHANGE_EVENT, callback);
+        this.removeListener(LIST_CHANGE_EVENT, callback);
     }
 
     getState() {
