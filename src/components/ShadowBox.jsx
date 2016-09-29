@@ -17,7 +17,7 @@ class ShadowBox extends React.Component {
     render() {
         return (
             <div className="da-shadow-box" onClick={this.hideShadowBox.bind(this)}>
-                <div className="da-shadow-box-content">
+                <div className="da-shadow-box-content" onClick={() => { return false; }}>
                     {this.props.children}
                 </div>
             </div>
