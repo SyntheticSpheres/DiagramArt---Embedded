@@ -95,11 +95,22 @@
     box-shadow: 0 0 0 1px #ebebeb;
     float: left;
     width: 300px;
+    max-height: 259px;
     margin: 5px;
+    padding-bottom: 34px;
     cursor: pointer;
 }
 
-.da-list .da-card:hover .da-card-title {
+.da-list .da-card .da-card-title {
+    position: absolute;
+    bottom: 0;
+}
+
+.da-list .da-card .da-card-title h3 {
+    margin: 5px 0;
+}
+
+.da-list .da-card:hover .da-card-title h3 {
     color: #b8e02e;
 }
 

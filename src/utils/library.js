@@ -18,10 +18,10 @@ const library = {
     load: function(query, page, limit) {
         console.log("library.load(" + query + ", " + page + ", " + limit + ")");
         $.ajax({
-            url: Routes.DIAGRAM_LIBRARY + query,
+            url: Routes.DIAGRAM_LIBRARY + "?limit=" + limit + "&page=" + page + "&qs=" + query,
             type: "GET",
             success: function(data) {
-                DiagramListActions.libraryLoaded(data);
+                DiagramListActions.libraryLoaded(data.rows, data.allDiagramsCount);
             }.bind(this)
         });
     },

@@ -13,6 +13,9 @@
     detail: {
         type: "abreast"
     },
+    pagination : {
+        limit: 10
+    },
     ajax: null,
     merge: function(source) {
         if( source.language ) {

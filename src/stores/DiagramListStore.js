@@ -1,6 +1,7 @@
 import EventEmitter from 'events';
 import Constants from '../constants/Constants.js';
 import AppDispatcher from '../dispatcher/AppDispatcher.js';
+import Settings from '../constants/Settings.js';
 
 var LIST_CHANGE_EVENT = "change";
 
@@ -13,6 +14,10 @@ class DiagramListStore extends EventEmitter {
     constructor() {
         super();
         this.library = [];
+        this.query = "",
+        this.page = 1;
+        this.limit = Settings.pagination.limit;
+        this.total = 0;
     }
 
     emitChange() {
@@ -37,7 +42,11 @@ class DiagramListStore extends EventEmitter {
 
     getState() {
         return {
-            library: this.library
+            library: this.library,
+            query: this.query,
+            page: this.page,
+            limit: this.limit,
+            total: this.total
         };
     }
 
@@ -48,6 +57,18 @@ class DiagramListStore extends EventEmitter {
     setLibrary(library) {
         this.library = library;
     }
+
+    setPage(page) {
+        this.page = page;
+    }
+
+    setTotal(total) {
+        this.total = total;
+    }
+
+    setQuery(query) {
+        this.query = query;
+    }
 }
 
 const diagramListStore = new DiagramListStore();
@@ -56,8 +77,13 @@ diagramListStore.dispatchToken = AppDispatcher.register(function(payload) {
     let action = payload.action;
 
     switch(action.actionType) {
+        case Constants.LIBRARY_LOAD:
+            diagramListStore.setQuery(action.query);
+            diagramListStore.setPage(action.page);
+            break;
         case Constants.LIBRARY_LOAD_SUCCESSFUL:
             diagramListStore.setLibrary(action.library);
+            diagramListStore.setTotal(action.total);
             break;
     }
     diagramListStore.emitChange();

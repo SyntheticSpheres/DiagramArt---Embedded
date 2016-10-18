@@ -3,7 +3,7 @@ import Constants from '../constants/Constants.js';
 import LibraryUtils from '../utils/library';
 
 /**
- * 
+ *
  * @author Matej 'juffalow' Jellus <juffalow@juffalow.com>
  */
 const DiagramListActions = {
@@ -28,11 +28,12 @@ const DiagramListActions = {
      *
      * @param object library
      */
-    libraryLoaded: function(library) {
+    libraryLoaded: function(library, total) {
         console.log("DiagramListActions.libraryLoaded(" + library + ")");
         AppDispatcher.handleAction({
             actionType: Constants.LIBRARY_LOAD_SUCCESSFUL,
-            library: library
+            library: library,
+            total: total
         });
     }
 };
