@@ -17,17 +17,26 @@ class Card extends React.Component {
         this.state = {
             image: 'http://www.ecra.gov.sa/Style%20Library/images/load.gif'
         }
+        this.downloadingImage = null;
     }
 
     /**
      *
      */
     componentWillMount() {
-        var downloadingImage = new Image();
-        downloadingImage.onload = function() {
+        this.downloadingImage = new Image();
+        this.downloadingImage.onload = function() {
             this.setState({image: this.props.preview});
         }.bind(this);
-        downloadingImage.src = this.props.preview;
+        this.downloadingImage.src = this.props.preview;
+    }
+
+    /**
+     * Stops loading preview image
+     * ( so react will not shout, that it is updating state of not existing component )
+     */
+    componentWillUnmount() {
+        this.downloadingImage.src = "";
     }
 
     showDetail() {

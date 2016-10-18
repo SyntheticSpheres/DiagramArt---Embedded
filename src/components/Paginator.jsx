@@ -10,6 +10,7 @@ class Paginator extends React.Component {
     static propTypes = {
         page: React.PropTypes.number,
         total: React.PropTypes.number,
+        limit: React.PropTypes.number,
         query: React.PropTypes.string
     };
 
@@ -19,7 +20,7 @@ class Paginator extends React.Component {
     }
 
     loadPage(page) {
-        DiagramListActions.loadLibrary(this.props.query, page, 10);
+        DiagramListActions.loadLibrary(this.props.query, page, this.props.limit);
     }
 
     render() {

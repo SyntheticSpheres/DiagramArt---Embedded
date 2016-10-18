@@ -7,6 +7,10 @@ import DiagramListActions from '../actions/DiagramListActions.js';
  * @author Matej 'juffalow' Jellus <juffalow@juffalow.com>
  */
 class Menu extends React.Component {
+    static propTypes = {
+        limit: React.PropTypes.number
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -16,7 +20,7 @@ class Menu extends React.Component {
 
     handleQueryChange(event) {
         this.setState({query: event.target.value});
-        DiagramListActions.loadLibrary(event.target.value, 1, 10);
+        DiagramListActions.loadLibrary(event.target.value, 1, this.props.limit);
     }
 
     render() {

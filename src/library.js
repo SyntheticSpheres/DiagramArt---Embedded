@@ -18,6 +18,6 @@ import Settings from './constants/Settings.js';
             throw "Selector is missing!";
         }
         Settings.merge(params);
-        ReactDOM.render(<DiagramArtLibrary />, document.getElementById(params.selector));
+        ReactDOM.render(<DiagramArtLibrary limit={params.diagramsPerPage} />, document.getElementById(params.selector));
     }
 })();

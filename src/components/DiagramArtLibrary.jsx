@@ -39,8 +39,8 @@ class DiagramArtLibrary extends React.Component {
         }
         return (
             <div className="da-library">
-                <Menu />
-                <DiagramList />
+                <Menu limit={this.props.limit} />
+                <DiagramList limit={this.props.limit} />
                 {diagramDetail}
             </div>
         );

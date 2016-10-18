@@ -10,6 +10,10 @@ import Paginator from './Paginator.jsx';
  * @author Matej 'juffalow' Jellus <juffalow@juffalow.com>
  */
 class DiagramList extends React.Component {
+    static propTypes = {
+        limit: React.PropTypes.number
+    };
+
     constructor(props) {
         super(props);
         this.state = DiagramListStore.getState();
@@ -18,7 +22,7 @@ class DiagramList extends React.Component {
 
     componentWillMount() {
         DiagramListStore.addChangeListener(this.onChange);
-        DiagramListActions.loadLibrary(this.state.query, this.state.page, this.state.limit);
+        DiagramListActions.loadLibrary(this.state.query, this.state.page, this.props.limit);
     }
 
     componentWillUnmount() {
@@ -47,7 +51,7 @@ class DiagramList extends React.Component {
                     </ul>
                 </div>
                 <div className="da-pagination">
-                    <Paginator page={this.state.page} total={Math.ceil(this.state.total / this.state.limit)} query={this.state.query} />
+                    <Paginator page={this.state.page} total={Math.ceil(this.state.total / this.props.limit)} limit={this.props.limit} query={this.state.query} />
                 </div>
             </div>
         );

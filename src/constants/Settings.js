@@ -7,25 +7,14 @@
         last: "Last", /* pagination button pointing on last page */
         search: "search" /* menu search placeholder */
     },
-    library: {
-        diagramsPerPage: 10 /* how many diagrams will be on one page */
-    },
     detail: {
         type: "abreast"
-    },
-    pagination : {
-        limit: 10
     },
     ajax: null,
     merge: function(source) {
         if( source.language ) {
             for( var key in source.language) {
                 this.language[key] = source.language[key];
-            }
-        }
-        if( source.library ) {
-            for( var key in source.library) {
-                this.library[key] = source.library[key];
             }
         }
         if( source.detail ) {

@@ -16,7 +16,6 @@ class DiagramListStore extends EventEmitter {
         this.library = [];
         this.query = "",
         this.page = 1;
-        this.limit = Settings.pagination.limit;
         this.total = 0;
     }
 
@@ -45,7 +44,6 @@ class DiagramListStore extends EventEmitter {
             library: this.library,
             query: this.query,
             page: this.page,
-            limit: this.limit,
             total: this.total
         };
     }
