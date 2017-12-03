@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu component renders correctly 1`] = `
+<nav
+  className="da-navbar"
+>
+  <ul>
+    <li>
+      <a
+        href="https://diagramart.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="diagramart logo"
+          height="50"
+          src="https://cdn.shopify.com/s/files/1/0255/1589/t/7/assets/diagramart_logo_with_tm.png?14105803135550891160"
+        />
+      </a>
+    </li>
+  </ul>
+  <form
+    className="da-nav-form da-nav-right"
+  >
+    <input
+      className="da-form-input"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </form>
+</nav>
+`;

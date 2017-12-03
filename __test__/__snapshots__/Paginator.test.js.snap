@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paginator component renders correctly 1`] = `
+<ul>
+  <li
+    className={undefined}
+  >
+    <a
+      onClick={[Function]}
+      role="button"
+    >
+      1
+    </a>
+  </li>
+  <li
+    className={undefined}
+  >
+    <a
+      onClick={[Function]}
+      role="button"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="active"
+  >
+    <a
+      onClick={[Function]}
+      role="button"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className={undefined}
+  >
+    <a
+      onClick={[Function]}
+      role="button"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className={undefined}
+  >
+    <a
+      onClick={[Function]}
+      role="button"
+    >
+      5
+    </a>
+  </li>
+</ul>
+`;

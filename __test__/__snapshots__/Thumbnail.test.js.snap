@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thumbnail component renders correctly 1`] = `
+<div
+  className="da-thumbnail small"
+  onClick={[Function]}
+>
+  <div
+    className="da-thumbnail-picture"
+  >
+    <img
+      alt=""
+      src="https://cdn.shopify.com/s/files/1/0255/1589/products/USPTO_Patent_0003302.png"
+    />
+  </div>
+  <div
+    className="da-thumbnail-title"
+  >
+    <h3>
+      diagram
+    </h3>
+  </div>
+</div>
+`;

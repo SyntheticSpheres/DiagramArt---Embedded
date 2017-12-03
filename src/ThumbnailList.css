@@ -1,0 +1,10 @@
+.da-thumbnail-list {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.da-thumbnail-list:after {
+  display: table;
+  content: " ";
+  clear: both;
+}

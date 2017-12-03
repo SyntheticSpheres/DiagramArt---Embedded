@@ -1,26 +1,48 @@
 {
-  "name": "DiagramArtEmbed",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/SyntheticSpheres/DiagramArt---Embedded",
-  "author": "Matej 'juffalow' Jellus",
-  "main": "./js/library.js",
+  "name": "test-app",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "enzyme": "^3.1.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.17",
+    "react-tabs": "^2.1.0",
+    "sinon": "^4.1.2",
+    "whatwg-fetch": "^2.0.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "test-coverage": "jest && ./node_modules/.bin/codecov",
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-core": "^6.9.1",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-class-properties": "^6.11.5",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.5.0",
-    "strip-loader": "^0.1.2",
-    "webpack": "^1.13.1"
+    "babel-jest": "^21.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "codecov": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.0.0"
   },
-  "dependencies": {
-    "events": "*",
-    "flux": "*",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/__jest__/enzyme.js",
+    "setupFiles": [
+      "<rootDir>/__jest__/shim.js"
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SyntheticSpheres/DiagramArt---Embedded"
   }
 }
