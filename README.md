@@ -1,6 +1,6 @@
 # [DiagramArt---Embedded](https://github.com/SyntheticSpheres/DiagramArt---Embedded)
 
-[![Build Status](https://travis-ci.org/SyntheticSpheres/OpenDiagram---synchronise-mysql-2-redis.svg?branch=master)](https://travis-ci.org/SyntheticSpheres/OpenDiagram---synchronise-mysql-2-redis)
+[![Build Status](https://travis-ci.org/SyntheticSpheres/DiagramArt---Embedded.svg?branch=master)](https://travis-ci.org/SyntheticSpheres/DiagramArt---Embedded)
 
 DiagramArt widget.
 
