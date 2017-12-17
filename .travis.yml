@@ -7,4 +7,4 @@ install:
   yarn install
 
 script:
-  - test-coverage
+  - yarn test-coverage
