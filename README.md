@@ -1,7 +1,6 @@
 # [DiagramArt---Embedded](https://github.com/SyntheticSpheres/DiagramArt---Embedded)
 
 [![Build Status](https://travis-ci.org/SyntheticSpheres/DiagramArt---Embedded.svg?branch=master)](https://travis-ci.org/SyntheticSpheres/DiagramArt---Embedded)
-
 [![codecov](https://codecov.io/gh/SyntheticSpheres/DiagramArt---Embedded/branch/master/graph/badge.svg)](https://codecov.io/gh/SyntheticSpheres/DiagramArt---Embedded)
 
 DiagramArt widget.

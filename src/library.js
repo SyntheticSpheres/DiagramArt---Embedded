@@ -6,6 +6,7 @@ import Paginator from './Paginator';
 import ShadowBox from './ShadowBox';
 import Detail from './Detail';
 import './DefaultFont.css';
+import './Library.css';
 
 const getDiagramLibraryUrl = (query, limit, page) => `https://api.diagramart.com/v1/ed/getDiagramLibrary/?limit=${limit}&page=${page}&qs=${query}`;
 
