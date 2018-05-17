@@ -30,4 +30,12 @@ describe('Paginator component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('simlate on page click', () => {
+    const tree = shallow(
+      <Paginator page={3} pages={5} onPageChange={callback} />
+    );
+    tree.find({ page: 1 }).simulate('click');
+    sinon.assert.calledOnce(callback);
+  });
 });
