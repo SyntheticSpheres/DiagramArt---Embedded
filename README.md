@@ -21,8 +21,6 @@ DiagramArt widget.
 </body>
 ```
 
-### Settings
-
 ## DiagramArt detail
 
 ```
