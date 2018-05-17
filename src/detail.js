@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import ImageLoader from './ImageLoader';
 import Loader from './Loader';
 import './Detail.css';
 
-const getDiagramUrl = (id) => `https://api.diagramart.com/v1/ed/getDiagram/${id}`;
+import withDiagramData from './hoc/withDiagramData';
 
 const LoadingPanels = () => (
   <Tabs>
@@ -44,44 +45,20 @@ const Panels = ({diagram}) => (
 );
 
 class Detail extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true,
-      imageLoading: true,
-      diagram: {},
-    };
-  }
-
-  componentDidMount() {
-    fetch(getDiagramUrl(this.props.id))
-      .then((response) => {
-        return response.json();
-      })
-      .then((obj) => {
-        this.setState({diagram: obj.product, loading: false}, () => {
-          let image = new Image();
-          image.onload = () => {
-            this.setState({imageLoading: false});
-          };
-          image.src = this.state.diagram.image.src;
-        });
-      });
-  }
-
   render() {
+    const isLoading = Object.keys(this.props.diagram).length === 0;
+    const imageSrc = this.props.diagram.hasOwnProperty('image') ? this.props.diagram.image.src : '';
+
     return (
       <div className="da-detail">
-        <h1 className="text-center">{this.state.loading ? "" : this.state.diagram.title}</h1>
+        <h1 className="text-center">{isLoading ? "" : this.props.diagram.title}</h1>
         <div className="da-col text-center">
           <div className="da-picture bordered">
-            {this.state.imageLoading && <Loader />}
-            {!this.state.imageLoading && <img src={this.state.diagram.image.src} alt={this.state.diagram.title} />}
+            <ImageLoader image={imageSrc} />
           </div>
         </div>
         <div className="da-col">
-          {this.state.loading ? <LoadingPanels /> : <Panels diagram={this.state.diagram} />}
+          { isLoading ? <LoadingPanels /> : <Panels diagram={this.props.diagram} /> }
         </div>
       </div>
     );
@@ -89,7 +66,7 @@ class Detail extends Component {
 }
 
 Detail.propTypes = {
-  id: PropTypes.number.isRequired,
+  diagram: PropTypes.object.isRequired,
 }
 
-export default Detail;
+export default withDiagramData(Detail);
