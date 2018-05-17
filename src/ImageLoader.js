@@ -12,12 +12,12 @@ class ImageLoader extends Component {
     };
 
     this.image = new Image();
+    this.image.onload = () => {
+      this.setState({ loading: false });
+    };
   }
 
   componentDidMount() {
-    this.image.onload = () => {
-      this.setState({loading: false});
-    };
     this.image.src = this.props.image;
   }
 
@@ -25,12 +25,22 @@ class ImageLoader extends Component {
     this.image.src = '';
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.image !== nextProps.image) {
+      this.image.src = nextProps.image;
+      this.setState({ loading: true });
+      return true;
+    }
+    return this.state.loading !== nextState.loading;
+  }
+
   render() {
     if (this.state.loading) {
       return ( <Loader /> );
-    } else {
-      return ( <img src={this.props.image} alt="" /> );
     }
+    return (
+      <img src={this.props.image} alt="" />
+    );
   }
 }
 
